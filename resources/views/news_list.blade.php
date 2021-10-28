@@ -18,17 +18,21 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .box{
+                border-bottom :4px dotted black;
+            }
         </style>
     </head>
     <body>
         <h1>Новости</h1>
         @foreach($news_list as $n => $item)
+        <div class="box">
             <a href="{{ route('news_item', ['slug' => $item->slug]) }}">{{ $item->title }} <--------ТЫК</a>
             <p> {{ $item->published_at }} </p>
             @if ($item->description !== null)
                 <p> {{ $item->description }}</p>
             @endif
-            <h1>-----------------------------------------------------------------------------------------------------</h1>
+            </div>
         @endforeach
         {{ $news_list->links() }}
     </body>
