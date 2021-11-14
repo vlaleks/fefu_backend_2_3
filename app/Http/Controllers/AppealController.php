@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\AppealPostRequest;
 use App\Sanitizers\AppealSanitizer;
 
+
 class AppealController extends Controller
 {
   public function __invoke(Request $request)
